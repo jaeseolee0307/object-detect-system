@@ -82,6 +82,13 @@ else
 	echo "meta-tensorflow-lite layer already exists"
 fi
 
+if [ $layer_info -ne 0 ];then
+	echo "Adding meta-objapp layer"
+	bitbake-layers add-layer ../meta-objapp
+else
+	echo "meta-objapp layer already exists"
+fi
+
 
 # Path to the 'conf/auto.conf' file
 FILE="conf/auto.conf"
